@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Hipotenusa2 {
+    public static void main(String[] args) {
+        int x, y;
+        
+        Scanner scanner = new Scanner(System.in); 
+        
+        System.out.println("Calcula a Hipotenusa");
+        
+        System.out.print("Digite um cateto -> ");
+        x = scanner.nextInt(); 
+        
+        System.out.println("Digite o outro cateto");
+        y = scanner.nextInt(); 
+        
+        double hipotenusa = Math.sqrt((x * x) + (y * y));
+        
+        System.out.println("A hipotenusa de um triangulo com catetos igual a " + x + " e " + y + " e " + hipotenusa);
+        
+
+        scanner.close();
+    }
+}
