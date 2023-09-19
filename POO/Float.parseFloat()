@@ -1,0 +1,12 @@
+import java.io.*;
+
+public class EntradaDeNumeros {
+    public static void main(String[] args) throws IOException {
+        DataInputStream input = new DataInputStream(System.in);
+
+        System.out.print("Digite um número float: ");
+        float numeroFloat = Float.parseFloat(input.readLine());
+
+        System.out.println("Você digitou o número float: " + numeroFloat);
+    }
+}
