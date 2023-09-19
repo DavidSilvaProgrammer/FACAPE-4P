@@ -1,0 +1,38 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+/*
+Quando se coloca o retorno da função Math.pow(,) ou Math.sqrt() para uma 
+variável do tipo floar, ocorre um erro porque a função Math.sqrt() 
+retorna um valor do tipo double.
+PS: Retirar comentário na hora de compilar.
+*/
+
+class HelloWorld {
+    public static void main(String[] args) throws Exception {
+        double a=3,b=4,c;
+        c=Math.pow(3,2)+Math.pow(4,2);
+        c=Math.sqrt(c);
+        System.out.println("Calculo da hipotenusa: "+c);
+    }
+}
+*****************************
+
+
+import java.util.Scanner;
+import java.lang.Math;
+
+/*
+A conversão de tipo forçada, também conhecida como "casting", é usada quando você deseja 
+converter um valor de um tipo de dado para outro tipo de dado.
+*/
+
+class HelloWorld {
+    public static void main(String[] args) throws Exception {
+        double a = 3, b = 4,c;
+        float resul;
+        c = Math.pow(a, 2) + Math.pow(b, 2);
+        resul = (float) Math.sqrt(c); 
+        System.out.println("Calculo da hipotenusa: " + resul);
+    }
+}
