@@ -42,5 +42,7 @@ class MediaAritmeticaJUtil {
         c = Math.sqrt(a * a + b * b);
 
         System.out.println("Resultado da hipotenusa: " + c);
+
+        JUtil.pause ();
     }
 }
