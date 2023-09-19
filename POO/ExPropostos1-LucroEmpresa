@@ -1,0 +1,29 @@
+import java.io.*;
+import java.lang.*;
+
+/*
+1) Calcule o lucro de um a empresa (receita menos
+despesa) e informe o resultado. Obs : Os valores em
+Real.
+*/
+
+class LucroEmpresa{
+    public static void main(String[] args) throws Exception{
+        double receita, despesa,lucro;
+        DataInputStream input = new DataInputStream(System.in);
+        System.out.println("Digite a receita da empresa: ");
+        receita = Float.valueOf(input.readLine()).floatValue();
+        System.out.println("Digite a despesa da empresa: ");
+        despesa = Float.valueOf(input.readLine()).floatValue();
+        
+        
+        lucro=receita-despesa;
+        
+        System.out.println("Lucro: "+lucro);
+        
+        
+        
+        
+        
+    }
+}
