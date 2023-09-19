@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+
+class HelloWorld {
+    public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe seu nome e sobrenome: ");
+        String nome = input.nextLine();
+        System.out.println("Seu nome digitado: " + nome);
+        
+        System.exit(0);
+        input.close();
+    }
+}
