@@ -1,0 +1,16 @@
+import java.util.*;
+
+class MediaAritmetica {
+    public static void main(String[] args){
+        int a,b;
+        float c;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite dois numero para obter a media aritmetica: ");
+        a= input.nextInt();
+        b= input.nextInt();
+        c= (float)(a+b)/2;
+        
+        System.out.println("Resultado da media aritmetica: "+ c);
+        
+    }
+}
