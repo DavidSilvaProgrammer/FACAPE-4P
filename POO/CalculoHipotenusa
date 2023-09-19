@@ -25,6 +25,9 @@ import java.lang.Math;
 /*
 A conversão de tipo forçada, também conhecida como "casting", é usada quando você deseja 
 converter um valor de um tipo de dado para outro tipo de dado.
+
+Calculo hipotenusa: Modo do Prof:  dc = Math.sqrt((fa * fa) + (fb * fb));
+
 */
 
 class HelloWorld {
