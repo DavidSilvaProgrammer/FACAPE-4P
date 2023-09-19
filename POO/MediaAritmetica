@@ -11,6 +11,31 @@ class MediaAritmetica {
         c= (float)(a+b)/2;
         
         System.out.println("Resultado da media aritmetica: "+ c);
+
+        input.close();
+        
+    }
+}
+
+*********************************
+
+import java.io.*;
+class MediaAritmetica{
+    public static void main(String[] args) throws Exception {
+        DataInputStream input = new DataInputStream(System.in);
+        int a, b;
+        float c;
+        
+        
+        System.out.println("Digite dois numeros inteiros para obter a media aritmetica: ");
+        a = Integer.valueOf(input.readLine()).intValue();
+        b = Integer.valueOf(input.readLine()).intValue();
+        
+        c = (float)(a+b)/2;
+        
+        System.out.println("Resultado da media aritmetica: "+ c);
+        
+        input.close();
         
     }
 }
