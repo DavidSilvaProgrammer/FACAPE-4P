@@ -1,0 +1,19 @@
+import java.lang.*;
+import java.io.*;
+
+class Main{
+    public static void main(String[] args) throws Exception{
+        int a;
+        float b,c;
+        
+        System.out.println("Digite um numero inteiro: ");
+        a = JUtil.readInt();
+        System.out.println("Digite um numero flutuante: ");
+        b = JUtil.readFloat();
+        
+        c=(a+b)/2;
+        
+        System.out.println("Media aritmetica: "+c);
+        
+    }
+}
