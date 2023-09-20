@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+/*
+5) Faça um programa que leia o nome, o peso e a
+altura. Calcule o peso ideal para homem e para
+mulher, conforme a fórmula abaixo:
+n · Homem : (72.7 * altura ) - 58.00
+n · Mulher : (62.10 * altura ) - 44.70
+*/
+class PesoIdeal{
+    public static void main(String[] args)throws Exception{
+        double peso_ideal, altura;
+        int genero=0;
+        DataInputStream input = new DataInputStream(System.in);
+        
+        while (genero != 1 && genero != 2){
+        
+        System.out.println("Digite 1 para homem. Digite 2 para mulher: ");
+        genero = Integer.valueOf(input.readLine()).intValue();
+        }
+        if (genero == 1){
+            System.out.println("Calculo para homem, digite a altura: ");
+            altura = Double.valueOf(input.readLine()).doubleValue();
+            peso_ideal= (72.7*altura)-58.00;
+            
+            System.out.println("Homem.\nAltura: "+ altura+"\nPeso ideal: "+peso_ideal);
+            
+        }else{
+            System.out.println("Calculo para mulher, digite a altura: ");
+            altura= Double.valueOf(input.readLine()).doubleValue();
+            peso_ideal= (62.10*altura)-44.70;
+            
+            System.out.println("Mulher.\nAltura: "+ altura+"\nPeso ideal: "+peso_ideal);
+        }
+        
+        input.close();
+        
+    }
+}
