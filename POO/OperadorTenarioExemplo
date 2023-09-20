@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class OperadorTernarioExemplo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numero = input.nextInt();
+
+        // Usando o operador ternário para verificar se o número é par ou ímpar
+        String resultado = (numero % 2 == 0) ? "par" : "ímpar";
+
+        System.out.println("O número digitado é " + resultado + ".");
+
+        input.close();
+    }
+}
