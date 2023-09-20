@@ -1,0 +1,93 @@
+public class Automovel {
+    /* Um Automóvel contém chassi, marca, modelo, capacidade do tanque,
+       quantidade atual de litros no tanque e consumo (quantos quilômetros faz com um litro).
+    */
+
+    String chassi, marca, modelo;
+    double capacidade, litros_atual, consumo_litro;
+
+    // Construtor da classe Automovel
+    public Automovel(String chassi, String marca, String modelo, double capacidade, double litros_atual, double consumo_litro) {
+        this.chassi = chassi;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.capacidade = capacidade;
+        this.litros_atual = litros_atual;
+        this.consumo_litro = consumo_litro;
+    }
+
+    // Método para calcular os litros finais após percorrer uma distância
+    public double calcularLitrosFinais(double distancia) {
+        return litros_atual - (distancia / consumo_litro);
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de uso da classe Automovel
+        Automovel carro = new Automovel("ABC123", "Ford", "Focus", 50.0, 50.0, 10.0);
+
+        double distanciaPercorrida = 20.0;
+        double litrosFinais = carro.calcularLitrosFinais(distanciaPercorrida);
+
+        System.out.println("Litros finais no tanque: " + litrosFinais + " litros");
+    }
+}
+
+******************************
+
+//Mais completo:
+
+
+import java.util.Scanner;
+
+public class Automovel {
+    String chassi, marca, modelo;
+    double capacidade, litros_atual, consumo_litro;
+
+    public Automovel(String chassi, String marca, String modelo, double capacidade, double litros_atual, double consumo_litro) {
+        this.chassi = chassi;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.capacidade = capacidade;
+        this.litros_atual = litros_atual;
+        this.consumo_litro = consumo_litro;
+    }
+
+    public double calcularLitrosFinais(double distancia) {
+        return litros_atual - (distancia / consumo_litro);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Solicita as características do automóvel
+        System.out.println("Informe as características do automóvel:");
+        System.out.print("Chassi: ");
+        String chassi = input.nextLine();
+        System.out.print("Marca: ");
+        String marca = input.nextLine();
+        System.out.print("Modelo: ");
+        String modelo = input.nextLine();
+        System.out.print("Capacidade do tanque (litros): ");
+        double capacidade = input.nextDouble();
+        System.out.print("Litros atuais no tanque: ");
+        double litros_atual = input.nextDouble();
+        System.out.print("Consumo (km/litro): ");
+        double consumo_litro = input.nextDouble();
+
+        // Cria a instância do automóvel com as características fornecidas
+        Automovel carro = new Automovel(chassi, marca, modelo, capacidade, litros_atual, consumo_litro);
+
+        // Exibe a quantidade inicial de litros no tanque
+        System.out.println("Quantidade inicial de litros no tanque: " + carro.litros_atual + " litros");
+
+        // Pergunta quantos quilômetros o automóvel percorreu
+        System.out.print("Quantos quilômetros o automóvel percorreu: ");
+        double distanciaPercorrida = input.nextDouble();
+
+        // Calcula os litros finais e exibe a quantidade de litros no tanque após a viagem
+        double litrosFinais = carro.calcularLitrosFinais(distanciaPercorrida);
+        System.out.println("Quantidade de litros no tanque após a viagem: " + litrosFinais + " litros");
+
+        input.close();
+    }
+}
