@@ -1,0 +1,31 @@
+
+import java.io.*;
+import java.util.*;
+/*
+4) Leia o raio (r) de um círculo e mostre o diâmetro, a
+circunferência e a área do círculo. Utilize para ππππ o
+valor da constante Math.PI (mais precisa que
+3,14159).
+– Diâmetro = 2r
+– Circunferência = 2 ππππr
+– área = ππππ r
+*/
+class CalculoCirculo{
+    public static void main(String[] args)throws Exception {
+        double raio, pi= Math.PI, diametro, circunf, area;
+        
+        DataInputStream input = new DataInputStream(System.in);
+        
+        System.out.println("Digite o valor do raio: ");
+        raio = Double.valueOf(input.readLine()).doubleValue();
+        
+        diametro= 2*raio;
+        circunf= 2*pi*raio;
+        area = pi * Math.pow(raio,2);
+        
+        System.out.println("PI: "+ pi +"\nRaio: "+raio+"\nDiametro: "+ diametro+"\nCircunferencia: "+circunf+"\nArea: "+ area);
+        
+        input.close();
+        
+    }
+}
