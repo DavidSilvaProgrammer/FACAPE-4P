@@ -1,0 +1,38 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class Combustivel{
+    public static void main(String[] args) throws Exception {
+        
+    double inicio, fim, litros_gastos, preco, capacidade;
+    
+    double distancia, consumo, autonomia, custo_viagem;
+    
+    
+    DataInputStream input = new DataInputStream(System.in);
+    
+        
+        System.out.println("Odometro antes de 1km: ");
+        inicio = Double.valueOf(input.readLine()).doubleValue();
+        System.out.println("Odometro apos 2km:");
+        fim =Double.valueOf(input.readLine()).doubleValue();
+        
+        System.out.println("Litros de combustivel gastos: ");
+        litros_gastos = Double.valueOf(input.readLine()).doubleValue();
+        System.out.println("Preco do litro do combustivel: ");
+        preco= Double.valueOf(input.readLine()).doubleValue();
+        System.out.println("Capacidade do tanque: ");
+        capacidade = Double.valueOf(input.readLine()).doubleValue();
+        
+        distancia = fim - inicio;
+        consumo = distancia/litros_gastos;
+        autonomia = consumo * capacidade;
+        custo_viagem = litros_gastos * preco;
+        
+        System.out.println("Quilometragem: "+distancia+"\nConsumo: "+ consumo+"\nAutonomia: "+ autonomia+"\nCusto de viagem: "+custo_viagem );
+        
+
+        
+    }
+}
