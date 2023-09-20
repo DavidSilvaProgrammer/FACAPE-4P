@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+class PesoIdeal{
+    public static void main(String[] args)throws Exception{
+        double peso_ideal, altura;
+        int genero=0;
+        DataInputStream input = new DataInputStream(System.in);
+        
+        System.out.println("Digite 1 para homem. Digite 2 para mulher: ");
+        genero = Integer.valueOf(input.readLine()).intValue();
+        
+        
+        switch(genero){
+            case 1:
+                System.out.println("Calculo para homem, digite a altura: ");
+                altura = Double.valueOf(input.readLine()).doubleValue();
+                peso_ideal= (72.7*altura)-58.00;
+            
+                System.out.println("Homem.\nAltura: "+ altura+"\nPeso ideal: "+peso_ideal);
+                break;
+            
+            case 2:
+                System.out.println("Calculo para mulher, digite a altura: ");
+                altura= Double.valueOf(input.readLine()).doubleValue();
+                peso_ideal= (62.10*altura)-44.70;
+            
+                System.out.println("Mulher.\nAltura: "+ altura+"\nPeso ideal: "+peso_ideal);
+                break;
+            default:
+                System.out.println("Numero invalido.");
+        }
+                
+        
+        input.close();
+    }
+    
+}
