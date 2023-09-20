@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+class Banana{
+    public static void main(String[] args) throws Exception{
+    
+        DataInputStream input = new DataInputStream(System.in);
+        
+        int n;
+        System.out.println("Digite um numeto: ");
+        n=Integer.valueOf(input.readLine()).intValue();
+        
+        System.out.println("Valor digitado: "+n);
+        
+    }
+}
