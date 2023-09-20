@@ -1,0 +1,20 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class Conta{
+    public static void main(String[] args) throws Exception{
+        Scanner input = new Scanner(System.in);
+        double a,b,c;
+        
+        System.out.println("Primeiro numero: ");
+        a = input.nextDouble();
+        System.out.println("Segundo numero: ");
+        b = input.nextDouble();
+        
+        c=a+b;
+        
+        System.out.println("Resultado: "+ c);
+        
+    }
+}
