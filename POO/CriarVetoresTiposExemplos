@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class PreencherVetorInteiros {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] vetor = new int[5]; // Cria um vetor vazio com espaço para 5 elementos inteiros
+
+        System.out.println("Digite 5 números inteiros para preencher o vetor:");
+
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print("Elemento " + (i + 1) + ": ");
+            vetor[i] = input.nextInt();
+        }
+
+        System.out.println("Vetor preenchido:");
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println("Elemento " + (i + 1) + ": " + vetor[i]);
+        }
+    }
+}
+
+
+****************************
+
+public class VetorStrings {
+    public static void main(String[] args) {
+        String[] nomes = {"Alice", "Bob", "Carol", "David", "Eva"};
+
+        System.out.println("Vetor de Nomes em String:");
+        for (int i = 0; i < nomes.length; i++) {
+            System.out.println("Elemento " + i + ": " + nomes[i]);
+        }
+    }
+}
+
+***********************
+
+public class VetorInteiros {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4, 5};
+
+        System.out.println("Vetor de Números Inteiros:");
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("Elemento " + i + ": " + numeros[i]);
+        }
+    }
+}
+
+****************************
+
+public class VetorFloat {
+    public static void main(String[] args) {
+        float[] notas = {7.5f, 8.0f, 6.5f, 9.0f, 7.8f};
+
+        System.out.println("Vetor de Notas em Ponto Flutuante:");
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println("Elemento " + i + ": " + notas[i]);
+        }
+    }
+}
