@@ -1,0 +1,38 @@
+public class ExemploBoolean {
+    public static void main(String[] args) {
+        // Variável booleana para representar se um aluno passou em um exame
+        boolean passouExame = true;
+
+        // Verificando o valor da variável booleana e exibindo uma mensagem com base nisso
+        if (passouExame) {
+            System.out.println("O aluno passou no exame!");
+        } else {
+            System.out.println("O aluno não passou no exame.");
+        }
+
+        // Outro exemplo com uma variável booleana
+        boolean temIdadeParaVotar = false;
+
+        if (temIdadeParaVotar) {
+            System.out.println("A pessoa pode votar.");
+        } else {
+            System.out.println("A pessoa não tem idade para votar.");
+        }
+    }
+}
+
+***********************
+
+public class ExemploBooleanSimples {
+    public static void main(String[] args) {
+        // Variável booleana para representar se um interruptor está ligado
+        boolean interruptorLigado = true;
+
+        // Verificando o valor da variável booleana e exibindo uma mensagem com base nisso
+        if (interruptorLigado) {
+            System.out.println("O interruptor está ligado.");
+        } else {
+            System.out.println("O interruptor está desligado.");
+        }
+    }
+}
