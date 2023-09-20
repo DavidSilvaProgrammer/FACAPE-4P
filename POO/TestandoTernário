@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+class Ternario{
+    public static void main(String[] args) throws Exception{
+        
+        int n;
+        DataInputStream input = new DataInputStream(System.in);
+        System.out.println("Digite 1 para dia. Digite 2 para noite: ");
+        n=Integer.valueOf(input.readLine()).intValue();
+        
+        
+        String resultado = ( n == 1) ? "turno da manha": "turno da noite";
+        
+        System.out.println("Bem vindo ao "+ resultado);
+        
+    }
+}
