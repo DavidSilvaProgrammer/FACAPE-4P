@@ -1,0 +1,31 @@
+import java.io.*;
+import java.lang.*;
+
+/*
+2) Calcule o salario liquido de um funcionario. Sera
+informado seu nome, seu salario base e o desconto
+do INSS (11%, por exemplo).
+Calculo : Liquido = Base – Base * Desconto / 100.
+*/
+
+class SalarioLiquido{
+    public static void main(String[] args) throws Exception{
+        String nome;
+        double liquido, base, desconto, desconto_real;
+        DataInputStream input = new DataInputStream(System.in);
+        
+        System.out.println("Informe o nome do funcionario: ");
+        nome = input.readLine();
+        System.out.println("Informe o salario base ");
+        base = Double.valueOf(input.readLine()).doubleValue();
+        System.out.println("Informe o desconto do INSS em porcentagem: ");
+        desconto = Double.valueOf(input.readLine()).doubleValue();
+        
+        liquido = base - base * (desconto / 100);
+        desconto_real = base - liquido;
+        
+        System.out.println("Nome: "+nome+"\nBase: "+ base+"\nDesconto INSS: "+desconto+"%"+"\nDesconto real: "+ desconto_real+"\nSalario liquido: "+ liquido );
+        
+        
+    }
+}
