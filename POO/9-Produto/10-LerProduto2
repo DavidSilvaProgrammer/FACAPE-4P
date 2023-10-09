@@ -1,0 +1,13 @@
+/*Crie um programa que inicialize 3 produtos:
+– 1,"Feijao "
+– 2,"Arroz", 30
+– 3,"Farinha", 30, "Kilograma", R$ 2.00*/
+
+public class ExecutaProduto{
+    public static void main(String[] args)throws Exception{
+        Produto p1 = new Produto(1,"Feijão");
+        Produto p2 = new Produto(2,"Arroz", 30);
+        Produto p3 = new Produto(3,"Farinha",30, "Kilograma", "R$ 2.00");
+        
+    }
+}
