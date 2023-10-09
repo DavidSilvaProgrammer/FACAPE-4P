@@ -3,7 +3,7 @@
 – 2,"Arroz", 30
 – 3,"Farinha", 30, "Kilograma", R$ 2.00*/
 
-public class ExecutaProduto{
+public class LerProduto2{
     public static void main(String[] args)throws Exception{
         Produto p1 = new Produto(1,"Feijão");
         Produto p2 = new Produto(2,"Arroz", 30);
