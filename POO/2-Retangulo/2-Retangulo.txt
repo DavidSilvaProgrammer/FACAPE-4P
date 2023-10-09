@@ -1,0 +1,4 @@
+2) Altere a Classe Cubo criando um construtor
+que receba e inicialize a aresta. Depois crie um
+programa que crie o objeto passando este
+parâmetro. Sair quando a base do for zero.
