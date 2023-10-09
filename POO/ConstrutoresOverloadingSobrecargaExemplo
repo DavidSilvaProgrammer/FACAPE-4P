@@ -1,0 +1,33 @@
+public class MinhaClasse {
+    private int valorA;
+    private int valorB;
+
+    // Construtor 1
+    public MinhaClasse() {
+        this.valorA = 0;
+        this.valorB = 0;
+    }
+
+    // Construtor 2
+    public MinhaClasse(int valorA) {
+        this.valorA = valorA;
+        this.valorB = 0;
+    }
+
+    // Construtor 3
+    public MinhaClasse(int valorA, int valorB) {
+        this.valorA = valorA;
+        this.valorB = valorB;
+    }
+    
+    // Outros métodos da classe...
+}
+
+/*
+
+MinhaClasse objeto1 = new MinhaClasse();            // Usa o Construtor 1
+MinhaClasse objeto2 = new MinhaClasse(10);          // Usa o Construtor 2
+MinhaClasse objeto3 = new MinhaClasse(20, 30);      // Usa o Construtor 3
+
+
+*/
