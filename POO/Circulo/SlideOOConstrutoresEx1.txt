@@ -1,0 +1,3 @@
+1) Altere a classe Circulo criando um construtor que receba e inicialize o raio.
+Depois crie um programa que crie o objeto passando este parâmetro. 
+Sair quando a base do for zero.
