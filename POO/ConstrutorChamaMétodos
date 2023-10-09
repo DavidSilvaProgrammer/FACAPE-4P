@@ -1,0 +1,24 @@
+public class MinhaClasse {
+    private int valorA;
+    private int valorB;
+
+    public MinhaClasse(int a, int b) {
+        inicializar(a, b);
+    }
+
+    private void inicializar(int a, int b) {
+        valorA = a;
+        valorB = b;
+        // Outras inicializações ou lógica de configuração
+    }
+
+    public void mostrarValores() {
+        System.out.println("ValorA: " + valorA);
+        System.out.println("ValorB: " + valorB);
+    }
+
+    public static void main(String[] args) {
+        MinhaClasse objeto = new MinhaClasse(10, 20);
+        objeto.mostrarValores();
+    }
+}
