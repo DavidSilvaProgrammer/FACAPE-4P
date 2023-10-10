@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Pessoa {
+    private String nome;
+    private int codigo;
+
+    public Pessoa(String nome, int codigo) {
+        this.nome = nome;
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+}
+
+public class ExemploVetorDeObjetos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de pessoas: ");
+        int quantidadePessoas = scanner.nextInt();
+
+        Pessoa[] pessoas = new Pessoa[quantidadePessoas];
+
+        // Preenche o vetor com objetos Pessoa
+        for (int i = 0; i < quantidadePessoas; i++) {
+            scanner.nextLine(); // Consumir a quebra de linha após o próximoInt()
+            System.out.print("Digite o nome da pessoa " + (i + 1) + ": ");
+            String nome = scanner.nextLine();
+            System.out.print("Digite o código da pessoa " + (i + 1) + ": ");
+            int codigo = scanner.nextInt();
+            pessoas[i] = new Pessoa(nome, codigo);
+        }
+
+        // Exibe os dados das pessoas no vetor
+        System.out.println("Dados das pessoas:");
+        for (int i = 0; i < quantidadePessoas; i++) {
+            System.out.println("Nome: " + pessoas[i].getNome() + ", Código: " + pessoas[i].getCodigo());
+        }
+
+        scanner.close();
+    }
+}
