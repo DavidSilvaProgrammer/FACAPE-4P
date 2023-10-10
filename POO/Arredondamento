@@ -1,0 +1,11 @@
+double numero = 3.7;
+long arredondado = Math.round(numero); // Isso arredondará para 4
+
+
+double numero = 3.2;
+double arredondado = Math.ceil(numero); // Isso arredondará para 4.0
+
+double numero = 3.8;
+double arredondado = Math.floor(numero); // Isso arredondará para 3.0
+
+
