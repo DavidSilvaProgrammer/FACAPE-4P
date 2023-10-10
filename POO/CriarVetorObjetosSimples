@@ -1,0 +1,34 @@
+public class Pessoa {
+    private String nome;
+    private int codigo;
+
+    public Pessoa(String nome, int codigo) {
+        this.nome = nome;
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+}
+
+public class ExemploVetorDeObjetos {
+    public static void main(String[] args) {
+        // Cria um vetor de objetos Pessoa com capacidade para 3 elementos
+        Pessoa[] pessoas = new Pessoa[3];
+
+        // Preenche o vetor com objetos Pessoa
+        pessoas[0] = new Pessoa("João", 101);
+        pessoas[1] = new Pessoa("Maria", 102);
+        pessoas[2] = new Pessoa("Pedro", 103);
+
+        // Acessa e exibe os dados das pessoas no vetor
+        for (int i = 0; i < pessoas.length; i++) {
+            System.out.println("Nome: " + pessoas[i].getNome() + ", Código: " + pessoas[i].getCodigo());
+        }
+    }
+}
