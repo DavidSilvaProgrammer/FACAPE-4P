@@ -1,0 +1,3 @@
+Opção 1: Aluno[] alunos = new Aluno[quantidadePessoas];
+
+Opção 2: Aluno alunos[] = new Aluno[quantidadePessoas];
