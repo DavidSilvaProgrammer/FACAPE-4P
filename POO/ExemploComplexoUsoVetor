@@ -1,0 +1,95 @@
+import java.util.Scanner;
+
+class Aluno {
+    private int codigo;
+    private String nome;
+    private float nota1;
+    private float nota2;
+    private float nota3;
+
+    public Aluno(int codigo, String nome, float nota1, float nota2, float nota3) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+
+    public float calcularMedia() {
+        return (nota1 + nota2 + nota3) / 3;
+    }
+
+    public float calcularMedia(float peso1, float peso2, float peso3) {
+        return (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Quantos alunos deseja cadastrar? ");
+        int quantidadeAlunos = scanner.nextInt();
+        scanner.nextLine(); // Consumir a quebra de linha
+
+        Aluno[] alunos = new Aluno[quantidadeAlunos];
+
+        for (int i = 0; i < quantidadeAlunos; i++) {
+            System.out.println("Informe os dados do aluno " + (i + 1) + ":");
+            System.out.print("Código: ");
+            int codigo = scanner.nextInt();
+            scanner.nextLine(); // Consumir a quebra de linha
+
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
+
+            System.out.print("Nota 1: ");
+            float nota1 = scanner.nextFloat();
+            System.out.print("Nota 2: ");
+            float nota2 = scanner.nextFloat();
+            System.out.print("Nota 3: ");
+            float nota3 = scanner.nextFloat();
+
+            alunos[i] = new Aluno(codigo, nome, nota1, nota2, nota3);
+        }
+
+        float mediaMedias = 0;
+        Aluno alunoMenorMedia = null;
+        Aluno alunoMaiorMedia = null;
+        float menorMedia = Float.MAX_VALUE;
+        float maiorMedia = Float.MIN_VALUE;
+
+        for (Aluno aluno : alunos) {
+            float media = aluno.calcularMedia();
+            mediaMedias += media;
+
+            if (media < menorMedia) {
+                menorMedia = media;
+                alunoMenorMedia = aluno;
+            }
+
+            if (media > maiorMedia) {
+                maiorMedia = media;
+                alunoMaiorMedia = aluno;
+            }
+        }
+
+        mediaMedias /= quantidadeAlunos;
+
+        System.out.println("\nCódigo Nome Nota1 Nota2 Nota3 Media");
+        for (Aluno aluno : alunos) {
+            System.out.println(aluno.getCodigo() + " " + aluno.getNome() + " " +
+                    aluno.nota1 + " " + aluno.nota2 + " " + aluno.nota3 + " " + aluno.calcularMedia());
+        }
+
+        System.out.println("\nA média das médias é: " + mediaMedias);
+        System.out.println("O aluno com menor média foi " + alunoMenorMedia.getNome() + " com " + menorMedia);
+        System.out.println("O aluno com maior média foi " + alunoMaiorMedia.getNome() + " com
