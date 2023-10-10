@@ -1,0 +1,7 @@
+int minhaVariavel = Integer.MAX_VALUE;
+
+double minhaVariavel = Double.MAX_VALUE;
+
+long minhaVariavel = Long.MAX_VALUE;
+
+
