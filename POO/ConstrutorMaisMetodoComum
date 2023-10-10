@@ -1,0 +1,23 @@
+public class MinhaClasse {
+    private int valorA;
+    private int valorB;
+
+    // Construtor da classe
+    public MinhaClasse(int a, int b) {
+        this.valorA = a;
+        this.valorB = b;
+    }
+
+    // Método para realizar alguma ação e retornar um resultado
+    public int calcularSoma() {
+        return valorA + valorB;
+    }
+
+    public static void main(String[] args) {
+        MinhaClasse minhaInstancia = new MinhaClasse(5, 10);
+
+        // Chamando o método após a criação do objeto para obter um resultado
+        int soma = minhaInstancia.calcularSoma();
+        System.out.println("A soma é: " + soma);
+    }
+}
