@@ -1,0 +1,18 @@
+/*Um Produto contém código, nome, quantidade, unidade, valor unitário e
+valor total (quantidade * valor unitário). Crie um programa que leia vários
+produtos. A quantidade de produtos será informada pelo usuário.
+Depois mostre os dados conforme exemplo abaixo.
+No final mostre:
+• Soma dos valores totais;
+• Nome e valor total do produto mais valioso;*/
+
+public class Produto{
+    
+    public int codigo;
+    public String nome, unidade;
+    public double quant, valorUnit, valorTotal;
+    
+    public void calculaTotal(){
+        this.valorTotal = quant*valorUnit;
+    }
+}
