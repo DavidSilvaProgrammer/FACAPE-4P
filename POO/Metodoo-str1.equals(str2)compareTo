@@ -1,0 +1,26 @@
+String str1 = "Hello";
+String str2 = "World";
+boolean saoIguais = str1.equals(str2);
+
+if (saoIguais) {
+    System.out.println("As strings são iguais.");
+} else {
+    System.out.println("As strings são diferentes.");
+}
+
+
+***************************
+
+
+String str1 = "apple";
+String str2 = "banana";
+
+int resultado = str1.compareTo(str2);
+
+if (resultado < 0) {
+    System.out.println("str1 vem antes de str2 na ordem alfabética.");
+} else if (resultado > 0) {
+    System.out.println("str2 vem antes de str1 na ordem alfabética.");
+} else {
+    System.out.println("str1 e str2 são iguais na ordem alfabética.");
+}
