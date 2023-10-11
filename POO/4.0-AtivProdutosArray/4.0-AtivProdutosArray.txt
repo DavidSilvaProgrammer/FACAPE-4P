@@ -1,0 +1,12 @@
+Um Produto contém código, nome, quantidade, unidade, valor unitário e
+valor total (quantidade * valor unitário). Crie um programa que leia vários
+produtos. A quantidade de produtos será informada pelo usuário.
+Depois mostre os dados conforme exemplo abaixo.
+No final mostre:
+• Soma dos valores totais;
+• Nome e valor total do produto mais valioso;
+Codigo Nome Quant Unid Valor Total
+1 Computador 1 Unid 1000 1000
+2 Monitor 5 Caixa 300 1500
+2500
+O produto mais valioso é Monitor com R$ 1500.
