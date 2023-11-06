@@ -1,0 +1,6 @@
+Sombrear, também conhecido como "shadowing" em inglês, é um conceito em programação 
+que ocorre quando uma variável ou método em uma classe filho (subclasse) tem o mesmo 
+nome que uma variável ou método na classe pai (superclasse). Como resultado, o membro 
+da classe filho "sombra" ou "encobre" o membro da classe pai, tornando-o inacessível 
+diretamente a partir da instância da classe filho. O sombreamento pode ocorrer 
+tanto com variáveis como com métodos. 
