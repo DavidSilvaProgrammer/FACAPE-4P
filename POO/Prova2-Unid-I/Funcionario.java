@@ -1,4 +1,4 @@
-class LerFuncionario
+class Funcionario
 {int matricula;
 String nome;
 float horas;
