@@ -1,0 +1,14 @@
+class A {
+    private B objetoB = new B();
+
+    public void chamarMetodoB() {
+        objetoB.metodoB();
+    }
+}
+
+public class Exemplo {
+    public static void main(String[] args) {
+        A objetoA = new A();
+        objetoA.chamarMetodoB();
+    }
+}
