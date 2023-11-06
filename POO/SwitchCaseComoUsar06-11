@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int valor;
+	    String diaSemana;
+	    Scanner input = new Scanner(System.in);
+	    
+		System.out.println("Digite um numero de 1 a 7 e receba um dia da semana equivalente:");
+		valor = input.nextInt();
+		
+		switch(valor){
+		    case 1:
+		        diaSemana = "domingo";
+		        break;
+		    case 2:
+		        diaSemana = "segunda";
+		        break;
+		    case 3:
+		        diaSemana = "terça";
+		        break;
+		    case 4:
+		        diaSemana = "quarta";
+		        break;
+		    case 5:
+		        diaSemana = "quinta";
+		        break;
+		    case 6:
+		        diaSemana = "sexta";
+		        break;
+		    case 7:
+		        diaSemana = "sabado";
+		        break;
+		    default:
+		        diaSemana = "Numero invalido";
+		}
+		
+		System.out.println("Dia da semana correspondente: "+ diaSemana);
+		
+	}
+}
+
+***********************************
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número de 1 a 7 para saber o dia da semana:");
+        int numero = scanner.nextInt();
+
+        String diaSemana;
+
+        switch (numero) {
+            case 1:
+                diaSemana = "Domingo";
+                break;
+            case 2:
+                diaSemana = "Segunda-feira";
+                break;
+            case 3:
+                diaSemana = "Terça-feira";
+                break;
+            case 4:
+                diaSemana = "Quarta-feira";
+                break;
+            case 5:
+                diaSemana = "Quinta-feira";
+                break;
+            case 6:
+                diaSemana = "Sexta-feira";
+                break;
+            case 7:
+                diaSemana = "Sábado";
+                break;
+            default:
+                diaSemana = "Número inválido. Digite um número de 1 a 7.";
+                break;
+        }
+
+        System.out.println("Dia da semana: " + diaSemana);
+
+        scanner.close();
+    }
+}
+
