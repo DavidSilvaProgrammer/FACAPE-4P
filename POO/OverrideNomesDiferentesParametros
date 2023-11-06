@@ -1,0 +1,12 @@
+class Superclasse {
+    public void fazerAlgo(int x, int y) {
+        // Implementação na superclasse
+    }
+}
+
+class Subclasse extends Superclasse {
+    @Override
+    public void fazerAlgo(int a, int b) {
+        // Implementação na subclasse com nomes de parâmetros diferentes
+    }
+}
