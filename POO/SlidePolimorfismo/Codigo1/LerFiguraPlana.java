@@ -1,13 +1,19 @@
 class LerFiguraPlana{
 
-    public static char lerTipo () throws Exception{
-        char tipo;
-        do{
-            System.out.print ("\nInforme 'R' para Retangulo,'C' para Circulo ou 'F' para Fim-> ");
-            tipo = JUtil.readChar ();
-                } while ((tipo != 'R') && (tipo != 'C') && (tipo != 'F'));
-                return (tipo);
+public static char lerTipo() throws Exception {
+    char tipo;
+    do {
+        System.out.print("\nInforme 'R' para Retangulo, 'C' para Circulo ou 'F' para Fim-> ");
+        String input = JUtil.readString();
+        if (input.length() > 0) {
+            tipo = input.charAt(0);
+        } else {
+            tipo = ' '; // Valor padrão se não for inserido nada
         }
+    } while ((tipo != 'R') && (tipo != 'C') && (tipo != 'F'));
+    return tipo;
+}
+
     
     public static void main(String[] args) throws Exception{ 
         FiguraPlana fp = new FiguraPlana () ;
@@ -34,11 +40,11 @@ class LerFiguraPlana{
             
             fp.mostrarDados (); // polimorfismo aqui
             if ( fp instanceof Circulo ){ 
-                System.out.println ("\n Area em PI do "+"circulo com comprimento 20 PI "+ 
-                ((Circulo)fp).area (20));
-            }
+                System.out.println ("\n Area em PI do "+"circulo com comprimento 20 PI "+((Circulo)fp).area (20));
+            
+            } //switch
         tipo = lerTipo ();
         } // while
     } // main
- } // class
+  }// class
                 
