@@ -12,3 +12,4 @@ void mostrarDados () {
     System.out.println ("\nArea = " + this.area ());
     System.out.println ("\nPerimetro = " + this.perimetro());
     }
+}
