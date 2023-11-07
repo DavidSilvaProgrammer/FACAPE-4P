@@ -1,0 +1,57 @@
+class Anime {
+    private String titulo;
+    
+    public Anime(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    public void reproduzir() {
+        System.out.println("Reproduzindo o anime " + titulo);
+    }
+}
+
+class ShonenAnime extends Anime {
+    public ShonenAnime(String titulo) {
+        super(titulo);
+    }
+
+    @Override
+    public void reproduzir() {
+        System.out.println("Reproduzindo o anime Shonen: " + titulo);
+    }
+}
+
+class ShojoAnime extends Anime {
+    public ShojoAnime(String titulo) {
+        super(titulo);
+    }
+
+    @Override
+    public void reproduzir() {
+        System.out.println("Reproduzindo o anime Shojo: " + titulo);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Anime anime1 = new ShonenAnime("Naruto");
+        Anime anime2 = new ShojoAnime("Sailor Moon");
+        
+        anime1.reproduzir(); // Chama o método específico da classe ShonenAnime
+        anime2.reproduzir(); // Chama o método específico da classe ShojoAnime
+    }
+}
+
+
+*************************
+
+
+Neste exemplo, temos a classe base Anime e duas classes derivadas, ShonenAnime e ShojoAnime, 
+que herdam de Anime. Cada classe derivada sobrescreve o método reproduzir para exibir uma 
+mensagem específica ao gênero do anime.
+
+Ao criar instâncias de ShonenAnime e ShojoAnime e chamando o método reproduzir, 
+o polimorfismo entra em ação. O método a ser chamado é determinado em tempo de 
+execução com base no tipo real do objeto. Isso permite que diferentes objetos se 
+comportem de maneira diferente, mesmo sendo referenciados por uma variável de tipo base. 
+Portanto, o código é polimórfico em relação aos diferentes gêneros de animes.
