@@ -1,0 +1,30 @@
+class Animal {
+    private String nome;
+
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+
+    protected void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void emitirSom() {
+        System.out.println("Animal faz um som.");
+    }
+}
+
+class Cachorro extends Animal {
+    private String raca;
+
+    public Cachorro(String nome, String raca) {
+        super(nome); // Chama o construtor da superclasse para inicializar o atributo "nome".
+        this.raca = raca;
+    }
+
+    public void setNomeDoCachorro(String nome) {
+        setNome(nome); // Usando o método da superclasse para definir o nome do cachorro.
+    }
+
+    // Resto da implementação...
+}
