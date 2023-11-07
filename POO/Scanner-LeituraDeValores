@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class LeituraDeValores {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Cria um objeto Scanner para entrada padrão (teclado).
+
+        // Lendo um valor int.
+        System.out.print("Digite um número inteiro: ");
+        int numeroInteiro = scanner.nextInt();
+        System.out.println("Você digitou: " + numeroInteiro);
+
+        // Lendo um valor double.
+        System.out.print("Digite um número decimal: ");
+        double numeroDecimal = scanner.nextDouble();
+        System.out.println("Você digitou: " + numeroDecimal);
+
+        // Lendo um valor boolean.
+        System.out.print("Digite true ou false: ");
+        boolean valorBoolean = scanner.nextBoolean();
+        System.out.println("Você digitou: " + valorBoolean);
+
+        // Lendo um valor char.
+        System.out.print("Digite um caractere: ");
+        char caractere = scanner.next().charAt(0);
+        System.out.println("Você digitou: " + caractere);
+
+        // Lendo uma linha de texto.
+        System.out.print("Digite uma linha de texto: ");
+        scanner.nextLine(); // Limpa a quebra de linha pendente.
+        String linhaDeTexto = scanner.nextLine();
+        System.out.println("Você digitou: " + linhaDeTexto);
+
+        scanner.close(); // Feche o objeto Scanner quando terminar de usá-lo.
+    }
+}
