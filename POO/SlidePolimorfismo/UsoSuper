@@ -28,3 +28,12 @@ class Cachorro extends Animal {
 
     // Resto da implementação...
 }
+
+
+/*
+Tanto super.setNome(nome) quanto setNome(nome) funcionariam nesse caso. O uso de super é 
+necessário apenas quando há um potencial conflito entre membros de uma classe e seus homônimos 
+na superclasse. Em muitos casos, o uso de super é opcional. No entanto, incluí-lo pode tornar 
+o código mais explícito e claro, especialmente quando há um nome de membro na subclasse que é 
+igual ao da superclasse.
+*/
