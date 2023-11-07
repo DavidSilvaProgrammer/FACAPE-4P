@@ -1,0 +1,22 @@
+class Animal {
+    private String nome;
+    private int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+class Cachorro extends Animal {
+    private String raca;
+
+    public Cachorro(String nome, String raca, int idade) {
+        super(nome, idade); // Ordem dos parâmetros deve corresponder ao construtor da superclasse.
+        this.raca = raca;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+}
