@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Animal {
+    private String nome;
+
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+public class ProgramaAnimais {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Quantos animais você deseja adicionar? ");
+        int quantidadeDeAnimais = scanner.nextInt();
+
+        List<Animal> animais = new ArrayList<>();
+
+        for (int i = 0; i < quantidadeDeAnimais; i++) {
+            System.out.print("Digite o nome do animal " + (i + 1) + ": ");
+            String nomeDoAnimal = scanner.next();
+            Animal animal = new Animal(nomeDoAnimal);
+            animais.add(animal);
+        }
+
+        System.out.println("Lista de animais inseridos:");
+        for (Animal animal : animais) {
+            System.out.println("Nome do animal: " + animal.getNome());
+        }
+
+        scanner.close();
+    }
+}
