@@ -1,0 +1,69 @@
+class Animal {
+    void fazerSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+class Cachorro extends Animal {
+    @Override
+    void fazerSom() {
+        System.out.println("Latido de cachorro");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Cachorro(); // Um objeto Cachorro é atribuído a uma referência Animal.
+        animal.fazerSom(); // A ligação dinâmica garante que o método correto seja chamado.
+    }
+}
+
+
+/*
+
+A ligação dinâmica é um conceito fundamental na programação orientada a 
+objetos em Java e em outras linguagens que suportam polimorfismo.
+
+Em Java, a ligação dinâmica (ou dynamic binding) ocorre quando um método é 
+chamado em um objeto e a implementação do método a ser executado é determinada 
+em tempo de execução, com base no tipo real do objeto. Isso permite que um método 
+sobrescrito em uma subclasse seja chamado em vez do método da superclasse, 
+se o objeto for uma instância da subclasse.
+
+
+*****************
+
+Neste exemplo, a ligação dinâmica garante que o método "fazerSom" do objeto seja determinado em tempo de execução 
+com base no tipo real do objeto (no caso, um Cachorro), e o resultado será "Latido de cachorro."
+
+Portanto, a ligação dinâmica é uma característica essencial da programação orientada a objetos em Java, 
+permitindo a chamada dos métodos apropriados, independentemente do tipo da variável de referência.
+
+
+Quando você instancia um objeto da seguinte forma:
+
+Cachorro animal = new Cachorro();
+
+Nesse caso, não há ligação dinâmica, porque você está criando uma instância da classe Cachorro 
+diretamente e atribuindo-a a uma referência do tipo Cachorro. Não há polimorfismo envolvido nesse cenário. 
+A referência animal é do tipo Cachorro, e o método chamado será sempre o método da classe Cachorro, 
+sem necessidade de ligação dinâmica para determinar qual método deve ser chamado.
+
+
+A ligação dinâmica ocorre quando você usa uma referência de uma classe base para apontar para 
+uma instância de uma classe derivada e, em seguida, chama um método nessa referência. 
+Nesse caso, a ligação dinâmica garante que o método apropriado da classe derivada seja chamado, com base no 
+tipo real do objeto apontado pela referência, como no exemplo que forneci anteriormente:
+
+
+Animal animal = new Cachorro(); 
+// Usando uma referência Animal para apontar para um objeto Cachorro.
+
+animal.fazerSom(); 
+// A ligação dinâmica garante que o método apropriado seja chamado.
+
+Neste exemplo, a ligação dinâmica garante que o método fazerSom da classe Cachorro 
+seja chamado, mesmo que a referência seja do tipo Animal.
+
+
+
