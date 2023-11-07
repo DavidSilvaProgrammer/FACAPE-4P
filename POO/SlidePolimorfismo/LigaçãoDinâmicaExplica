@@ -66,4 +66,22 @@ Neste exemplo, a ligação dinâmica garante que o método fazerSom da classe Ca
 seja chamado, mesmo que a referência seja do tipo Animal.
 
 
+**********************
+
+Explicação resumida:
+
+A vinculação dinâmica (ou ligação dinâmica) é o processo pelo qual a linguagem de programação 
+determina qual implementação do método deve ser chamada com base no tipo real do objeto 
+que está recebendo a mensagem. Isso significa que, se você tiver várias classes que 
+herdam de uma mesma classe base e sobrescrevem um método, a versão correta desse 
+método será chamada com base no tipo do objeto em tempo de execução.
+
+Por exemplo, considerando as classes Animal e Cachorro, se você tiver uma referência 
+do tipo Animal apontando para um objeto do tipo Cachorro, a vinculação dinâmica garantirá 
+que o método apropriado da classe Cachorro seja chamado quando você enviar a mensagem 
+para o objeto.
+
+Assim, o polimorfismo é possível graças à vinculação dinâmica de mensagens a 
+definições de métodos, permitindo que o código seja flexível e extensível.
+
 
