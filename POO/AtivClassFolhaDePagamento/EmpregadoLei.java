@@ -13,8 +13,8 @@ public class EmpregadoLei extends Empregado
     }
         @Override
         public void setSalarioBase(double salarioBase){
-            if (salarioBase > this.salarioBase){
-            this.salarioBase= salarioBase;
+            if (SalarioBase > this.getSalarioBase()){
+            super.setSalarioBase(salarioBase);
         }else{
             System.out.println("Valor so pode ser maior que o atual, conforme a Lei\n");
         }
