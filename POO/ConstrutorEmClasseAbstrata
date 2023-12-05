@@ -1,0 +1,35 @@
+abstract class Animal {
+    private String nome;
+
+    // Construtor da classe abstrata
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+
+    // Método abstrato
+    public abstract void fazerBarulho();
+}
+
+class Cachorro extends Animal {
+    // Construtor da classe concreta que estende a classe abstrata
+    public Cachorro(String nome) {
+        super(nome);
+    }
+
+    // Implementação do método abstrato
+    @Override
+    public void fazerBarulho() {
+        System.out.println("Au au!");
+    }
+}
+
+public class Teste {
+    public static void main(String[] args) {
+        // Não é possível instanciar a classe abstrata Animal diretamente
+        // Animal animal = new Animal("Animal"); // Isso causaria um erro de compilação
+
+        // Mas é possível criar instâncias das subclasses concretas
+        Cachorro cachorro = new Cachorro("Rex");
+        cachorro.fazerBarulho();
+    }
+}
