@@ -1,0 +1,48 @@
+class Animal {
+    private String nome;
+
+    // Construtor da classe pai
+    public Animal(String nome) {
+        this.nome = nome;
+        System.out.println("Construindo um Animal");
+    }
+
+    public void fazerBarulho() {
+        System.out.println("Barulho genérico de animal");
+    }
+}
+
+class Cachorro extends Animal {
+    private String raca;
+
+    // Construtor da classe filha, que chama o construtor da classe pai usando super
+    public Cachorro(String nome, String raca) {
+        super(nome); // Chama o construtor da classe pai
+        this.raca = raca;
+        System.out.println("Construindo um Cachorro");
+    }
+
+    // Sobrescreve o método fazerBarulho da classe pai
+    @Override
+    public void fazerBarulho() {
+        System.out.println("Au au!");
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+}
+
+public class Teste {
+    public static void main(String[] args) {
+        // Cria uma instância da classe filha Cachorro
+        Cachorro cachorro = new Cachorro("Rex", "Labrador");
+
+        // Chama o método fazerBarulho da classe filha
+        cachorro.fazerBarulho();
+
+        // Acessa o método da classe pai usando a instância da classe filha
+        System.out.println("Nome do animal: " + cachorro.getNome());
+        System.out.println("Raça do cachorro: " + cachorro.getRaca());
+    }
+}
