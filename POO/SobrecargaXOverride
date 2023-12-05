@@ -1,0 +1,55 @@
+
+Sobrecarga (Overloading):
+A sobrecarga ocorre quando duas ou mais funções no mesmo escopo têm o mesmo nome, 
+mas diferentes listas de parâmetros. Os critérios para sobrecarga incluem:
+
+    Nome do método: Deve ser o mesmo para todas as funções sobrecarregadas.
+    Tipo e/ou quantidade de parâmetros: Deve ser diferente para cada função sobrecarregada.
+
+Exemplo:
+
+java
+
+class ExemploSobrecarga {
+    void mostrar(int a) {
+        System.out.println("Mostrando int: " + a);
+    }
+
+    void mostrar(String s) {
+        System.out.println("Mostrando String: " + s);
+    }
+}
+
+Aqui, há duas versões do método mostrar, uma que aceita um inteiro e 
+outra que aceita uma string. Isso é uma sobrecarga.
+
+Sobreescrita (Overriding):
+A sobreescrita ocorre quando uma subclasse fornece uma implementação 
+específica para um método que já está definido em sua classe pai. 
+Os critérios para sobreescrita incluem:
+
+    Nome do método: Deve ser o mesmo para o método na classe pai e na subclasse.
+    Assinatura do método (tipo e quantidade de parâmetros): 
+    Deve ser idêntica na classe pai e na subclasse.
+    Tipo de retorno: Pode ser o mesmo ou um subtipo (covariante) na subclasse.
+
+Exemplo:
+
+java
+
+class Animal {
+    void fazerBarulho() {
+        System.out.println("Barulho genérico de animal");
+    }
+}
+
+class Cachorro extends Animal {
+    // Sobreescrita do método fazerBarulho da classe pai
+    void fazerBarulho() {
+        System.out.println("Au au!");
+    }
+}
+
+Neste exemplo, a classe Cachorro fornece uma implementação específica para o 
+método fazerBarulho, que já está definido na classe pai Animal. 
+Isso é uma sobreescrita.
