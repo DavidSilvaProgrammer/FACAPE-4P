@@ -1,0 +1,53 @@
+Folha de Pagamento.
+Crie uma classe abstrata Empregado
+(com encapsulamento máximo) contendo os atributos : matricula (G/S), nome(G/S),
+salarioBase(G/S). O processo de
+inicialização deve inicializar matricula, nome e salarioBase. Crie um método
+chamado salarioLiquido que calcula e
+retorna o salario líquido do mês (salarioBase * (1-INSS)). O INSS é fixo em
+0.11 (11%). O mostrarDados deve
+mostrar a matricula, o nome e o salárioBase.
+
+
+ 
+
+
+Crie uma classe concreta EmpregadoLei que herda as características de Empregado. A inicialização é conforme a classe Empregado. O método que altera o salarioBase deve ser modificado. Conforme a lei, o novo salário
+informado (passado como parâmetro) só pode ser maior que o atual. Caso
+contrário deve ser dada uma mensagem apropriada.
+
+
+ 
+
+
+Crie uma classe concreta EmpregadoComissao (com encapsulamento máximo) que herda as
+características de EmpregadoLei. Um
+novo atributo deve ser acrescentado, a comissão
+(G/S) em %. O processo de inicialização é conforme a classe EmpregadoLei, inicializando também a
+comissão. O método que calcula o salarioLiquido
+deve ser modificado. Este método recebe como
+parâmetro o total ($) das vendas
+no mês e calcula o salário líquido do mês conforme a fórmula: (salarioLiquido +
+(vendas * (comissao/100)) ). O mostrarDados
+deve, além da comissão, mostrar a matrícula, o nome, o salário base e o INSS.
+(Não use super mostrarDados)
+
+
+ 
+
+
+Crie um programa chamado FolhaPagamento. Crie um empregado com matricula 1. Nome Joao e
+salário base R$ 600,00. Crie outro empregado com matricula 2, nome
+Maria, salário base R$ 1000,00 e comissão 10%. Altere o salário de Joao
+para 500. Mostre o salario líquido de Joao e o de Maria que vendeu neste mês R$
+100,00. Altere o salário de Joao para R$ 700,00 e altere o salário de Maria
+para R$ 1200,00. Mostre o salário líquido de Joao e o de Maria que vendeu neste
+mês R$ 200,00.
+
+
+ 
+
+
+Obs:                    G/S
+– Criar método Get e Set;     G – Criar
+método Get.
