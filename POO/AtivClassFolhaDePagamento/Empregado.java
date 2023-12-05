@@ -1,5 +1,5 @@
 
-class Empregado
+abstract class Empregado
 {
     //matricula (G/S), nome(G/S),salarioBase(G/S).
     
