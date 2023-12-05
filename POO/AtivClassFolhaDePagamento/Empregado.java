@@ -32,7 +32,7 @@ abstract class Empregado
 
     }
     
-    public void setSalarioBase(){
+    public void setSalarioBase(double salarioBase){
         this.salarioBase= salarioBase;
     }
     
