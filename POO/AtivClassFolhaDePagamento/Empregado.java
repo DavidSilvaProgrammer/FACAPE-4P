@@ -6,7 +6,7 @@ abstract class Empregado
     private double matricula, salarioBase; 
     private String nome;
     
-    Empregado (double matricula, String nome, double salarioBase){
+    public Empregado (double matricula, String nome, double salarioBase){
         this.matricula = matricula;
         this.nome = nome;
         this.salarioBase = salarioBase;
