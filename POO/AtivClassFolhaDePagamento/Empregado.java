@@ -3,7 +3,7 @@ abstract class Empregado
 {
     //matricula (G/S), nome(G/S),salarioBase(G/S).
     
-    private double matricula, salarioBase; 
+    private double matricula, salarioBase, INSS= 0.11;
     private String nome;
     
     public Empregado (double matricula, String nome, double salarioBase){
@@ -11,6 +11,16 @@ abstract class Empregado
         this.nome = nome;
         this.salarioBase = salarioBase;
     }
+
+     public double getINSS(){
+         return this.INSS;
+     }
+     
+     public void setINSS(double INSS){
+         this.INSS = INSS;
+     }
+
+    
      public double getMatricula(){
          return this.matricula;
      }
@@ -44,7 +54,6 @@ mostrar a matricula, o nome e o salárioBase.
 */
 
 public double salarioLiquido(){
-    double INSS= 0.11;
 
     return this.salarioBase*(1-INSS);
 }
