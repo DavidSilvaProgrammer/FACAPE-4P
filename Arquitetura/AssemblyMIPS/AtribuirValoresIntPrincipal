@@ -1,0 +1,17 @@
+.data
+	
+
+
+.text
+
+	li $t0,75    #atribuindo valor a registrador por meio do li (load immediate)
+	li $t1,25
+	
+	# poderia ser addi $t1,$zero,25
+	# poderia ser addi $t1,$zero,-25
+	
+	add $s0,$t0,$t1 #somando registradores
+	
+	#subtração seria com sub ou subi
+	
+	addi $s1,$s0,36
