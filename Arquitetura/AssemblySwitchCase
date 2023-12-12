@@ -1,0 +1,40 @@
+/*
+Em Assembly, a estrutura switch-case de linguagens de alto nível como C ou Python é 
+geralmente implementada usando uma combinação de instruções de comparação (cmp), 
+salto condicional (ja, jb, jg, jl, etc.) e uma tabela de salto (jump table).
+*/
+cmp eax, valor1
+je caso1
+cmp eax, valor2
+je caso2
+jmp default
+
+caso1:
+; Código para o caso 1
+jmp fim
+
+caso2:
+; Código para o caso 2
+jmp fim
+
+default:
+; Código para o caso default
+
+fim:
+; Continuação do código
+
+
+/*
+Neste exemplo, cmp compara o valor em eax com um valor específico, e je (jump if equal) salta para uma etiqueta específica 
+se os valores forem iguais. Se nenhum dos casos corresponder, o código salta para o caso default.
+
+No entanto, para um grande número de casos, é mais eficiente usar uma tabela de salto. 
+A tabela de salto é um array de endereços de memória para onde o código deve saltar com base no valor da expressão switch. */
+
+jmp *tabela_salto(, %edx, 4) ; Salta para o endereço na tabela de salto baseado no valor em edx
+
+/*Neste exemplo, jmp *tabela_salto(, %edx, 4) usa o valor em edx como um índice na tabela de salto. 
+Cada entrada na tabela de salto é um endereço de memória que corresponde a um caso. 
+*/
+
+
