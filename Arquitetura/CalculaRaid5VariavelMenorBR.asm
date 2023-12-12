@@ -68,6 +68,7 @@ end_loop:
     la $t2, menor
     l.s $f2, 0($t2)
     mtc1 $t1, $f1
+    li.s $f3, 1
     sub.s $f1, $f1, $f3
     mul.s $f0, $f1, $f2
     swc1 $f0, capacidade_armazenamento
