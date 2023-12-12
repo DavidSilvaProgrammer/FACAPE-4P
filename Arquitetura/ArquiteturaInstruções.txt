@@ -1,0 +1,22 @@
+Instruções para o projeto da segunda unidade:
+Pode ser feito em dupla, ou individual. Data de entrega 12/12
+
+Parte 1: Utilizando o simulador MARS, desenvolva instruções que:
+
+Receba do usuário o número do RAID desejado;
+Receba do usuário a quantidade de Discos inseridos;
+Receba o tamanho de cada HD em GB;
+E retorne o espaço de armazenamento disponível;
+
+Deverá ter opções de RAID 0, 1, 10, 5 e 6
+
+Parte 2: Escolha 2 das opções:
+
+    Calculadora
+    Calculo do IMC
+    Fatorial e um número
+    Sequencia de Fibonacci
+
+
+
+
