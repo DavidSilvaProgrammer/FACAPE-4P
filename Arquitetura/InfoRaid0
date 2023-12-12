@@ -1,0 +1,7 @@
+Sim, você está correto. No RAID 0, o espaço útil disponível 
+será a capacidade de cada disco rígido multiplicado pela quantidade de discos no arranjo. 
+No entanto, se os discos tiverem capacidades diferentes, o sistema será formatado pela capacidade do 
+menor disco. Portanto, um arranjo com 2 HDs formado por 1 disco de 1TB e um de 4TB terá apenas 2TB de 
+capacidade livre. Isso ocorre porque o RAID 0 divide os dados igualmente entre os discos, e se um disco 
+for menor, ele limitará a quantidade de dados que podem ser armazenados no arranjo. É sempre recomendado 
+usar discos de capacidades iguais ao configurar um RAID 0 para maximizar o espaço de armazenamento disponível.
