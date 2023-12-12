@@ -59,3 +59,14 @@ print_result:
     # Fim do programa
     li $v0, 10
     syscall
+
+
+/*
+Este programa solicita ao usuário que digite dois números e uma operação. 
+Em seguida, realiza a operação escolhida nos números e imprime o resultado. 
+Note que este programa não verifica se o usuário está tentando dividir por zero, 
+nem se a operação escolhida é válida. Adicionar essas verificações tornaria o programa 
+significativamente mais complexo. Além disso, a entrada e saída de dados são feitas de uma vez, 
+ao contrário do programa Python original que solicita cada valor separadamente. 
+Isso foi feito para simplificar o código.
+*/
