@@ -87,3 +87,11 @@ print_result:
     # Encerra o programa
     li $v0, 10
     syscall
+
+
+/*
+Este programa solicita ao usuário a quantidade de discos, o valor do menor disco e o número do RAID. E
+m seguida, ele calcula o resultado com base no número do RAID e imprime o resultado. Por favor, note que este é um 
+exemplo simples e não inclui tratamento de erros. Espero que isso ajude! Se você tiver mais perguntas, 
+sinta-se à vontade para perguntar.
+*/
