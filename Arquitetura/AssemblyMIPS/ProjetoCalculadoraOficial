@@ -1,0 +1,97 @@
+.data
+	msg1: .asciiz "Informe o número 1 : "
+	msg2: .asciiz "Informe o número 2 : "
+	msgS: .asciiz "Soma é : \n "
+	msgSub: .asciiz "Subtração é : \n "
+	msgD: .asciiz "Divisão é : \n "
+	msgM: .asciiz "Multiplicação é : \n "
+	msgOp: .asciiz "Escolha a operação que deseja realizar: \n 1 - Soma \n 2 - Subtração \n 3 - Divisão \n 4 - Multiplicação \n"
+
+.text
+	li $v0, 4
+	la $a0, msg1
+	syscall
+	
+	li $v0, 5
+	syscall
+
+	move $t0, $v0
+
+	li $v0, 4
+	la $a0, msg2
+	syscall
+	
+	li $v0,5
+	syscall
+
+	move $t1, $v0
+
+	li $v0, 4
+	la $a0, msgOp
+	syscall
+	
+	li $v0, 5
+	syscall
+	
+	move $t6, $v0
+	
+	#realizando a operação escolhida pelo usuário
+	
+	beq $t6, 1, soma
+	beq $t6, 2, sub
+	beq $t6, 3, div
+	beq $t6, 4, mul
+	
+soma:
+	add $t2, $t0, $t1
+	
+	li $v0, 4
+	la $a0, msgS
+	syscall
+	
+	li $v0, 1
+	move $a0, $t2
+	syscall	
+	
+	j end
+	
+sub:
+	sub $t3, $t0, $t1
+	
+	li $v0, 4
+	la $a0, msgSub
+	syscall
+	
+	li $v0, 1
+	move $a0, $t3
+	syscall	
+	
+	j end
+	
+div:
+	div $t4, $t0, $t1
+	
+	li $v0, 4
+	la $a0, msgD
+	syscall
+	
+	li $v0, 1
+	move $a0, $t4
+	syscall	
+	
+	j end
+	
+mul:
+	mul $t5, $t0, $t1
+	
+	li $v0, 4
+	la $a0, msgM
+	syscall
+	
+	li $v0, 1
+	move $a0, $t5
+	syscall	
+	
+	j end
+	
+end:
